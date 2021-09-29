@@ -1,0 +1,7 @@
+grumphp:
+  tasks:
+    composer:
+      strict: true
+    jsonlint: ~
+    phplint: ~
+    phpunit: ~

@@ -1,0 +1,62 @@
+{
+  "name": "colvin/common-domain-php",
+  "description": "Domain structure for shared projects",
+  "authors": [
+    {
+      "name": "Aaron Bernabeu Rodríguez",
+      "email": "aaron.bernabeu@thecolvinco.com"
+    },
+    {
+      "name": "Alejandro Mascort Colomer",
+      "email": "alejandro.mascort@thecolvinco.com"
+    },
+    {
+      "name": "Alejandro García Sánchez",
+      "email": "alejandro.garcia@thecolvinco.com"
+    },
+    {
+      "name": "Diego García",
+      "email": "diego@thecolvinco.com"
+    },
+    {
+      "name": "Miquel Mariño Espinosa",
+      "email": "miquel.marino@thecolvinco.com"
+    },
+    {
+      "name": "Juan Cama Villafan",
+      "email": "juan.cama@thecolvinco.com"
+    },
+    {
+      "name": "Victor del Valle",
+      "email": "victor.delvalle@thecolvinco.com"
+    }
+  ],
+  "license": "MIT",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Colvin\\CommonDomain\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Colvin\\CommonDomain\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "symfony/uid": "^5.3"
+  },
+  "require-dev": {
+    "phpro/grumphp": "^1.5",
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "rm -rf .git/hooks",
+      "mkdir -p .git/hooks",
+      "cp -r ./config/hooks/* .git/hooks"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+name: pipeline
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build environment
+        run: |
+          make start
+
+      - name: Unit tests
+        run: make phpunit
